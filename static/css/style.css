@@ -5,12 +5,6 @@ body {
   background-color: #f9f9f9;
 }
 
-@media (min-width: 1200px) {
-  .container{
-      max-width: 1100px;
-  }
-}
-
 .container {
   padding: 0 60px;
   margin: 0 auto;
@@ -225,33 +219,6 @@ a {
   /* TODO if there is a better way to add hyphens */
 }
 
-/* TODO */
-
-@media only screen and (max-width: 992px) {
-	#recent-news {
-		width: 100%;
-	}
-
-	#slide-window {
-		display: none;
-	}
-
-	.site-name {
-		width:100%;
-		display: flex;
-		justify-content: center;
-	}
-
-	#nav-menu {
-		width: 100%;
-		margin: 10px 0 -1px;
-		padding-top: 3px;
-		padding-bottom: 20px;
-		font-weight: lighter;
-		text-align: center;
-	}
-}
-
 /* news section */
 #news {
 	display: block;
@@ -338,4 +305,84 @@ a {
 
 .author-website {
 	font-weight: normal;
+}
+
+
+@media (min-width: 1200px) {
+  .container{
+      max-width: 1100px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+	#recent-news {
+		width: 100%;
+	}
+
+	#slide-window {
+		display: none;
+	}
+
+	.site-name {
+		width:100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	#nav-menu {
+		width: 100%;
+		margin: 10px 0 -1px;
+		padding-top: 3px;
+		padding-bottom: 20px;
+		font-weight: lighter;
+		text-align: center;
+	}
+
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	hr {
+		visibility: hidden;
+	}
+}
+
+@media only screen and (max-width: 418px) {
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 369px) {
+	#logo-pic {
+		display: none;
+	}
+
+	.people li {
+		height: auto;
+		float: left;
+		display: inline;
+		padding: 8px;
+		text-align: center;
+		width: 125px;
+		min-height: 214px;
+		margin-right: 20px;
+	}
+	
+	.people h6 {
+		text-align: center;
+		vertical-align: middle;
+		margin-bottom: 2px;
+	}
+
+	.people img {
+		vertical-align: middle;
+		height: 160px;
+		width: 120px;
+		padding-bottom: 10px;
+		object-fit: cover;
+		border-radius: 20%;
+	}
 }
