@@ -1,0 +1,36 @@
+{{- $site := .Site }}
+{{- $len := len .Params.authors }}
+
+{{ range $index, $person := .Params.authors}}
+<div style="display: inline;">
+	{{ $.Scratch.Set "found" "false"}}
+	{{ range $page := where $site.Pages "Type" "people" }}
+		{{ if (eq $person $page.Params.name) }}
+			{{ $.Scratch.Set "found" "true"}}
+			{{ if (isset .Params "website") | and (not (eq .Params.website "")) }}
+				<a class="author-website" href="{{$page.Params.website}}">
+			{{ end }}
+			
+			{{/*  deal with the last person name  */}}
+			{{ if eq (add $index 1) $len }}
+				{{ $person }}
+			{{ else }}
+				{{ $person }},
+			{{ end }}
+
+			{{ if (isset .Params "website") | and (not (eq .Params.website "")) }}
+				</a>
+			{{ end }}
+		{{ end }}
+	{{ end }}
+
+	{{ if (eq ($.Scratch.Get "found") "false") }}
+		{{/*  deal with the last person name  */}}
+		{{ if eq (add $index 1) $len }}
+			{{ $person }}
+		{{ else }}
+			{{ $person }},
+		{{ end }}
+	{{ end }}
+</div>
+{{ end }}

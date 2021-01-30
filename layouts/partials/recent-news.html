@@ -1,0 +1,19 @@
+<div id="home-news">
+{{ range first .Site.Params.numNewsItems ((where .Site.Pages "Type" "news").GroupByDate "2006-01-28")}}
+	{{ range .Pages}}
+		{{ if (isset .Params "short_desc") | and (not (eq .Params.short_desc "")) }}
+			<div class="home-news-item">
+				<div class="home-news-time">{{ .Date.Format "Jan 2006" }}</div>
+				<div class="home-news-content">
+					{{ if isset .Params "icon" | and (not (eq .Params.icon "")) }}
+						<i class="{{.Params.icon}}" style="color: #c41230;"></i>
+					{{ else }}
+						<i class="fas fa-bullhorn" style="color: #c41230;"></i>
+					{{ end }}
+					{{ .Params.short_desc | markdownify }}
+				</div>
+			</div>
+		{{ end }}
+	{{ end }}
+{{ end }}
+</div>

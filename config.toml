@@ -1,3 +1,35 @@
-baseURL = "http://example.org/"
+baseURL = "https://utsasrg.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Mass Lab"
+theme = "hugo-mass-lab"
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+  groupName = "Mass Lab @ UMASS Amherst"
+  description = "Welcome to Mass Lab"
+  numNewsItems = 3
+  ignoreFiles = [".DS_Store"]
+
+[[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    identifier = "news"
+    name = "News"
+    url = "/news/"
+    weight = 2
+
+[[menu.main]]
+    identifier = "people"
+    name = "People"
+    url = "/people/"
+    weight = 3
+
+[[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "/publications/"
+    weight = 4
