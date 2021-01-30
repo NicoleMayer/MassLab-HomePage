@@ -242,6 +242,9 @@ a {
 .news-content {
 	font-weight: lighter;
 	margin-bottom: 10pt;
+	word-break: break-word;
+  hyphens: auto;
+  /* TODO if there is a better way to add hyphens */
 }
 
 /* people section */
@@ -301,6 +304,9 @@ a {
 .publication {
 	padding-bottom: 10px; 
 	vertical-align: middle;
+	word-break: break-word;
+  hyphens: auto;
+  /* TODO if there is a better way to add hyphens */
 }
 
 .author-website {
@@ -367,12 +373,6 @@ a {
 	#publication-list {
 		font-weight: normal;
 	}
-}
-
-@media only screen and (max-width: 369px) {
-	#logo-pic {
-		display: none;
-	}
 
 	.people li {
 		height: auto;
@@ -398,5 +398,11 @@ a {
 		padding-bottom: 10px;
 		object-fit: cover;
 		border-radius: 20%;
+	}
+}
+
+@media only screen and (max-width: 369px) {
+	#logo-pic {
+		display: none;
 	}
 }
