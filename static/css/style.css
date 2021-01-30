@@ -193,7 +193,7 @@ a {
 	padding: 20px;
 	float: right;
 	border: 1px solid #e7e7e7;
-	width: 38%;
+	width: 36%;
 }
 
 #home-news {
@@ -334,7 +334,6 @@ a {
 		margin: 10px 0 -1px;
 		padding-top: 3px;
 		padding-bottom: 20px;
-		font-weight: lighter;
 		text-align: center;
 	}
 
@@ -352,6 +351,21 @@ a {
 	.container {
 		padding-left: 20px;
 		padding-right: 20px;
+	}
+	.home-news-item {
+		font-weight: normal;
+	}
+
+	#nav-menu {
+		font-weight: normal;
+	}
+
+	.news-content {
+		font-weight: normal;
+	}
+
+	#publication-list {
+		font-weight: normal;
 	}
 }
 
