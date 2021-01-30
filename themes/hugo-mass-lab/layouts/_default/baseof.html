@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head" . }}
+  <body>
+    {{ partial "header" . }}
+    <div id="body">
+      <div class="container">
+          <div class="col-group">
+            {{ block "content" . }}{{ end }}
+          </div>
+      </div>
+    </div>
+    {{ partial "footer" . }}
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{{ define "content"}}
+<div class="jumbotron">
+  <h2>Welcome to the Mass Lab</h2>
+  <u>MA</u>ssachusetts’ <u>S</u>oftware <u>S</u>ystem Research Lab
+  <br><br>
+  <h6>
+    We explore opportunities in software systems including, but not limited to, <br>
+    the security, performance and reliability.
+  </h6>
+</div>
+
+<div id="photos-and-news">
+  {{ partial "gallery-slider.html" . }}
+
+  <div id="recent-news">
+    <h3> Recent News </h3>
+    {{partial "recent-news.html" .}}
+    <div class="text"><a href="/news/" style="float: right;"><i class="fa fa-history" style="color: rgb(54, 55, 56);"></i> All news&hellip;</a></div>
+  </div>
+</div>
+
+<div style="clear: both;"></div>
+{{ end }}

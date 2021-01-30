@@ -1,0 +1,61 @@
+{{ define "content"}}
+{{- $folder := "/images/people/" }}
+<div id="people-list">
+  {{ range .Data.Pages.GroupByParam "role" }}
+    {{/*  separate alumni and current students  */}}
+    {{ if (eq .Key "5_phd_alum") }}
+      <br />
+    {{ end }}
+
+    {{/*  list all people  */}}
+    <div class="row">
+      <div>
+        {{/*  list the role of current peoplee  */}}
+        {{if (eq .Key "1_1_faculty")}}
+        <h3>Faculty</h3>
+        {{else if (eq .Key "1_2_staff")}}
+        <h3>Staff</h3>
+        {{else if (eq .Key "2_phd_student")}}
+        <h3>Ph.D. Students</h3>
+        {{else if (eq .Key "3_ms_student")}}
+        <h3>M.S. Students</h3>
+        {{else if (eq .Key "4_undergrad_student")}}
+        <h3>Undergraduate Students</h3>
+        {{else if (eq .Key "5_phd_alum")}}
+        <h3>Ph.D. Alumni</h3>
+        {{else if (eq .Key "6_ms_alum")}}
+        <h3>M.S. Alumni</h3>
+        {{else if (eq .Key "7_undergrad_alum")}}
+        <h3>Undergraduate Alumni</h3>
+        {{end}}
+        
+        <ul class="people">
+          {{ range sort .Pages ".Params.name" "" }}
+            {{if (isset .Params "name") | and (not (eq .Params.name ""))}}
+            <li>
+              {{ if (isset .Params "website") | and (not (eq .Params.website "")) }}
+                <a href="{{.Params.website}}">
+              {{ end }}
+              
+              {{if (isset .Params "img")}}
+                <img src={{ print $folder .Params.img | absURL }} />
+              {{end}}
+              
+              <h6>{{.Params.name}}</h6>
+              
+              {{ if (isset .Params "website") | and (not (eq .Params.website "")) }}
+                </a>
+              {{ end }}
+              
+              {{ if (isset .Params "bio") | and (not (eq .Params.bio "")) }}
+                <span class="bio">{{.Params.bio}}</span>
+              {{ end }}
+            </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,36 @@
+{{ define "content"}}
+  <div id="publication-list">
+    <h1>{{ .Title }}</h1>
+    {{ range .Data.Pages.GroupByDate "2006"}}
+      <h3>{{ .Key }}</h3>
+      {{ range .Pages }}
+        <div class="publication">
+          <strong>{{ .Params.title | markdownify }}</strong>
+          <br>
+          {{ partial "authors.html" . }}
+          <br>
+          {{ .Params.conference_or_journal }}. 
+          
+          <span class="paper-icons">
+            {{ if (isset .Params "paper_link") | and (not (eq .Params.paper_link "")) }}
+            <a href="{{ .Params.paper_link }}"><i class="fa fa-file-pdf"></i></a>
+            {{ end }}
+            {{ if (isset .Params "ppt_link") | and (not (eq .Params.ppt_link "")) }}
+            <a href="{{ .Params.ppt_link }}"><i class="fa fa-file-powerpoint"></i></a>
+            {{ end }}
+            {{ if (isset .Params "video_link") | and (not (eq .Params.video_link "")) }}
+            <a href="{{ .Params.video_link }}"><i class="fa fa-video"></i></a>
+            {{ end }}
+            {{ if (isset .Params "code_link") | and (not (eq .Params.code_link "")) }}
+            <a href="{{ .Params.code_link }}"><i class="fab fa-github"></i></a>
+            {{ end }}
+            {{ if (isset .Params "web_link") | and (not (eq .Params.web_link "")) }}
+            <a href="{{ .Params.web_link }}"><i class="fas fa-globe"></i></a>
+            {{ end }}
+          </span>
+          <br>
+        </div>    
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}

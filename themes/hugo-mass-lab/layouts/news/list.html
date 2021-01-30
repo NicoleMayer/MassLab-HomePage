@@ -1,0 +1,19 @@
+{{ define "content"}}
+<div id="news">
+<h1>{{ .Title }}</h1>
+{{ range .Data.Pages.GroupByDate "2006"}}
+	<h3>{{ .Key }}</h3>
+	{{ range .Pages }}
+		<div class="news-content">
+			{{ if isset .Params "icon" | and (not (eq .Params.icon "")) }}
+				<i class="{{.Params.icon}}" style="color: #c2384f;"></i>
+			{{ else }}
+				<i class="fas fa-bullhorn" style="color: #c2384f;"></i>
+			{{ end }}
+			{{ .Params.short_desc | markdownify }}
+			<div class="news-time">{{ .Date.Format "Jan 2006" }}</div>
+		</div>
+	{{ end }}
+{{ end }}
+</div>
+{{ end }}
