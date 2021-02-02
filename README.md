@@ -17,6 +17,9 @@ others
 todos
 
 * modify the stylesheet for bootstrap and fontawesome
+* archetypes
+* Project section
+* Detailed Readme?
 
 to-confirms
 
