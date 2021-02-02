@@ -7,5 +7,5 @@ name = "Jiaxun Tang"
 img = "JiaxunTang.jpg"
 role = "3_ms_student"
 email = ""
-website = "https://www.linkedin.com/in/steven-jiaxun-tang-2829711a4/"
+website = "https://xttechgroup.com"
 +++
