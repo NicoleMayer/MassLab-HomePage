@@ -5,7 +5,7 @@ class = "people"
 draft = false
 name = "Jiaxun Tang"
 img = "JiaxunTang.jpg"
-role = "3_ms_student"
+role = "2_phd_student"
 email = ""
 website = "https://xttechgroup.com"
 +++
