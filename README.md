@@ -18,13 +18,13 @@ todos
 
 * modify the stylesheet for bootstrap and fontawesome
 * archetypes
-* Project section
-* Detailed Readme?
+* project section
+* detailed Readme
+* write some scripts to make it easy for beginners to add content
 
 to-confirms
 
-* the link for Bo Wu is invalid
-
+/
 
 to-fixs
 

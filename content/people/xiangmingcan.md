@@ -8,6 +8,4 @@ img = "MingcanXiang.jpg"
 role = "3_ms_student"
 email = ""
 website = "https://mitchellx.github.io/"
-
-
 +++

@@ -8,8 +8,4 @@ img = "ssilvestro.png"
 role = "5_phd_alum"
 email = ""
 website = "http://www.cs.utsa.edu/~ssilvestro/"
-
-
 +++
-
-<!-- You can add some text here using markdown or pure HTML (any markdown inside a html tag will not be parsed, however.) The markdown parser used is called blackfriday. -->
